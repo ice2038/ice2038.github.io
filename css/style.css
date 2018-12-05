@@ -1,0 +1,211 @@
+/*-------------------------------------
+[Master Stylesheet]
+Project:	      Pavel Zima | Resume
+Author:         Pavel Zima
+Version:	      1.0
+----------------------------------------*/
+/*--------------------------------------
+          TABLE OF CONTENTS
+----------------------------------------
+    1. STYLESHEET
+        1.1. FONT
+        1.2. BODY
+        1.3. TYPOGRAPHY
+        1.4. COMPONENT
+    2. CONTAINER STRUCTURE
+    3. MAIN SECTION
+    4. ASIDE SECTION
+----------------------------------------*/
+
+/*---------------FONT-------------------*/
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?5vpuma');
+  src:  url('../fonts/icomoon.eot?5vpuma#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?5vpuma') format('truetype'),
+    url('../fonts/icomoon.woff?5vpuma') format('woff'),
+    url('../fonts/icomoon.svg?5vpuma#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-twitter:before {
+  content: "\e904";
+  color: #1DA1F2; }
+.icon-github:before {
+  content: "\e903";
+  color: #181717; }
+.icon-linkedin:before {
+  content: "\e900";
+  color: #0077B5; }
+.icon-gmail:before {
+  content: "\e901";
+  color: #D14836; }
+.icon-skype:before {
+  content: "\e902";
+  color: #00AFF0; }
+.icon-location:before {
+  content: "\e948"; }
+.icon-download:before {
+  content: "\e960"; }
+
+/*---------------BODY-------------------*/
+* {
+  box-sizing: border-box; /* 1 */
+}
+
+body {
+	margin: 0;
+  padding: 1rem;
+  outline: 0;
+  font-family: 'Roboto', sans-serif;
+  color: #24292e;
+  background-color: #fafafa;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='100' height='50' viewBox='0 0 100 50'%3E%3Cdefs%3E%3Crect stroke='%23ffffff' stroke-width='0.04' width='1' height='1' id='s'/%3E%3Cpattern id='a' width='2' height='2' patternUnits='userSpaceOnUse'%3E%3Cg stroke='%23ffffff' stroke-width='0.04'%3E%3Crect fill='%23fafafa' width='1' height='1'/%3E%3Crect fill='%23ffffff' width='1' height='1' x='1' y='1'/%3E%3Crect fill='%23f5f5f5' width='1' height='1' y='1'/%3E%3Crect fill='%23f0f0f0' width='1' height='1' x='1'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='b' width='5' height='11' patternUnits='userSpaceOnUse'%3E%3Cg fill='%23ebebeb'%3E%3Cuse xlink:href='%23s' x='2' y='0'/%3E%3Cuse xlink:href='%23s' x='4' y='1'/%3E%3Cuse xlink:href='%23s' x='1' y='2'/%3E%3Cuse xlink:href='%23s' x='2' y='4'/%3E%3Cuse xlink:href='%23s' x='4' y='6'/%3E%3Cuse xlink:href='%23s' x='0' y='8'/%3E%3Cuse xlink:href='%23s' x='3' y='9'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='c' width='7' height='7' patternUnits='userSpaceOnUse'%3E%3Cg fill='%23e5e5e5'%3E%3Cuse xlink:href='%23s' x='1' y='1'/%3E%3Cuse xlink:href='%23s' x='3' y='4'/%3E%3Cuse xlink:href='%23s' x='5' y='6'/%3E%3Cuse xlink:href='%23s' x='0' y='3'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='d' width='11' height='5' patternUnits='userSpaceOnUse'%3E%3Cg fill='%23ffffff'%3E%3Cuse xlink:href='%23s' x='1' y='1'/%3E%3Cuse xlink:href='%23s' x='6' y='3'/%3E%3Cuse xlink:href='%23s' x='8' y='2'/%3E%3Cuse xlink:href='%23s' x='3' y='0'/%3E%3Cuse xlink:href='%23s' x='0' y='3'/%3E%3C/g%3E%3Cg fill='%23e0e0e0'%3E%3Cuse xlink:href='%23s' x='8' y='3'/%3E%3Cuse xlink:href='%23s' x='4' y='2'/%3E%3Cuse xlink:href='%23s' x='5' y='4'/%3E%3Cuse xlink:href='%23s' x='10' y='0'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='e' width='47' height='23' patternUnits='userSpaceOnUse'%3E%3Cg fill='%237bc96f'%3E%3Cuse xlink:href='%23s' x='2' y='5'/%3E%3Cuse xlink:href='%23s' x='23' y='13'/%3E%3Cuse xlink:href='%23s' x='4' y='18'/%3E%3Cuse xlink:href='%23s' x='35' y='9'/%3E%3C/g%3E%3C/pattern%3E%3Cpattern id='f' width='61' height='31' patternUnits='userSpaceOnUse'%3E%3Cg fill='%237bc96f'%3E%3Cuse xlink:href='%23s' x='16' y='0'/%3E%3Cuse xlink:href='%23s' x='13' y='22'/%3E%3Cuse xlink:href='%23s' x='44' y='15'/%3E%3Cuse xlink:href='%23s' x='12' y='11'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect fill='url(%23a)' width='100' height='50'/%3E%3Crect fill='url(%23b)' width='100' height='50'/%3E%3Crect fill='url(%23c)' width='100' height='50'/%3E%3Crect fill='url(%23d)' width='100' height='50'/%3E%3Crect fill='url(%23e)' width='100' height='50'/%3E%3Crect fill='url(%23f)' width='100' height='50'/%3E%3C/svg%3E");
+  /* background by SVGBackgrounds.com */
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+h1, h2, h3 {
+	margin: 0;
+  padding: 0; }
+  
+ul, p {
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style: none;
+  margin: 0; }
+
+/*-------------TYPOGRAPHY----------------*/
+h1, h2, h3, p, a, li {
+  font-family: 'Roboto', sans-serif; }
+
+h1 {
+  font-weight: 700;
+  font-size: 1.625rem; }
+
+h2 {
+  font-weight: 300;
+  font-size: 1.25rem;
+  color: #666; }
+  
+h3 {
+  font-weight: 700; }
+
+p, a, li {
+  font-weight: 400; }
+
+/*---------------COMPONENTS--------------*/
+a {
+  color: #24292e; 
+  text-decoration: none; }
+  a:hover, a:active, a:focus {
+    color: #3B3434;
+    outline: 0; }
+
+/*---------------CONTAINER STRUCTURE-------------------*/
+.container {
+	display: -webkit-flex;
+	display: flex;
+	max-width: 1000px;
+  margin: 0 auto; }
+
+.aside {
+	-webkit-flex: 1;
+  flex: 1;
+  flex-basis: 25%;
+	background-color: #fafafa;
+	border: 1px solid #BFBFBF;
+	padding: 2rem;
+	margin-right: 0.5rem; }
+
+.main {
+	-webkit-flex: 3;
+  flex: 3;
+  flex-basis: 75%;
+  background-color: #fafafa;
+  border: 1px solid #BFBFBF; }
+
+@media all and (max-width:700px) {
+  .container {
+    /* On small screens, we are no longer using row direction but column */
+    flex-direction: column; }
+  
+  .aside {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: inherit;
+    margin-bottom: 1rem;
+    max-height: 18rem; }
+
+  .main {
+    width: 100%; }
+}
+
+/*---------------MAIN SECTION-------------------*/
+.main p, .main ul {
+  padding: 0.5rem 0 1rem 0; }
+
+.main-info {
+	padding: 2rem; }
+
+.main-info a {
+	text-decoration: underline; }
+
+.main-info li::before {
+	content: "\2014\00a0"; }
+
+/*---------------ASIDE SECTION-------------------*/
+.aside img {
+	border-radius: 0.3rem;
+	width: 100%;
+	max-width: 230px;
+	text-align: center;
+	box-shadow: 1px 1px 3px #BFBFBF;
+	margin: 0 0 1rem 0; }
+
+.aside .social-media {
+	margin-top: 1.8rem; }
+
+.aside .social-media ul li {
+	padding: 0.3rem 0; }
+
+.basic-information {
+	margin: 1.8rem 0 0 0; }
+
+.basic-information h3 {
+	margin: 0.3rem 0; }
+
+.basic-information p {
+	padding-bottom: 0.3rem; }
+
+@media all and (max-width:700px) {
+  .aside img {
+    max-width: 100px; }
+  
+  .aside .basic-information {
+    margin: 0; }
+}
